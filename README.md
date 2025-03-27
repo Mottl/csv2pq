@@ -1,4 +1,5 @@
 # csv2pq — CSV to Apache Parquet converter
+[![Crates.io](https://img.shields.io/crates/v/csv2pq.svg)](https://crates.io/crates/csv2pq)
 
 ## Installation
 Install Rust with Cargo and then:

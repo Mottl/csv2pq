@@ -10,12 +10,17 @@ use anyhow::{Result, anyhow};
 use arrow_csv::{ReaderBuilder, reader::Format};
 use arrow_schema::{DataType, Field, Fields, Schema};
 use clap::{Parser, ValueHint};
-use csv2pq::{RewindableReader, TempFile};
 use parquet::{
     arrow::ArrowWriter,
     basic::{Compression, GzipLevel},
     file::properties::WriterProperties,
 };
+
+mod rewindable_reader;
+mod tempfile;
+
+use rewindable_reader::RewindableReader;
+use tempfile::TempFile;
 
 /// Number of rows to read from csv to infer schema
 pub const MAX_READ_RECORDS: usize = 8192;

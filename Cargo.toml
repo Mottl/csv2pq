@@ -1,6 +1,6 @@
 [package]
 name = "csv2pq"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 authors = ["Dmitry Mottl"]
 license = "MIT/Apache-2.0"
@@ -9,9 +9,9 @@ description = "CSV to Apache parquet converter"
 
 [dependencies]
 anyhow = "1.0.97"
-arrow-csv = "54.2.1"
-arrow-schema = { version = "54.2.1", features=["serde"] }
-clap = { version="4.5.31", features=["derive"] }
+arrow-csv = "54.3.0"
+arrow-schema = { version = "54.3.0", features=["serde"] }
+clap = { version="4.5.34", features=["derive"] }
 flate2 = { version = "1.1.0", features = ["zlib-ng"] }
-parquet = "54.2.1"
-serde_json = "1.0.138"
+parquet = "54.3.0"
+serde_json = "1.0.140"
